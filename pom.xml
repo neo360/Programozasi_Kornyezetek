@@ -118,5 +118,11 @@
 			</plugin>
 		</plugins>
 	</build>
-
+	<distributionManagement>
+		<repository>
+			<id>github</id>
+			<name>Github Packages</name>
+			<url>https://maven.pkg.github.com/neo360/Programozasi_Kornyezetek</url>
+		</repository>
+	</distributionManagement>
 </project>

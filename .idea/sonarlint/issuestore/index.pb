@@ -42,8 +42,6 @@ c
 :
 
 Dockerfile,6\6\6651ddff6eb82c840ced7c1dddee15c6e1913dd4
-7
-pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 _
 /src/main/java/com/accounts/entity/Customer.java,7\0\703733518e6ed4d98e46c7e9c3d600ae2f9e3a5f
 _
