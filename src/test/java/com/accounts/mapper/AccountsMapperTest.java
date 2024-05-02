@@ -6,11 +6,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-public class AccountsMapperTest {
+class AccountsMapperTest {
 
     @Test
-    public void testMapToAccountsDto() {
-        // Arrange
+    void testMapToAccountsDto() {
         Accounts accounts = new Accounts();
         accounts.setAccountNumber(1234567890L);
         accounts.setAccountType("Savings");
@@ -18,10 +17,8 @@ public class AccountsMapperTest {
 
         AccountsDto accountsDto = new AccountsDto();
 
-        // Act
         AccountsDto mappedDto = AccountsMapper.mapToAccountsDto(accounts, accountsDto);
 
-        // Assert
         assertNotNull(mappedDto);
         assertEquals(accounts.getAccountNumber(), mappedDto.getAccountNumber());
         assertEquals(accounts.getAccountType(), mappedDto.getAccountType());
@@ -29,8 +26,7 @@ public class AccountsMapperTest {
     }
 
     @Test
-    public void testMapToAccounts() {
-        // Arrange
+    void testMapToAccounts() {
         AccountsDto accountsDto = new AccountsDto();
         accountsDto.setAccountNumber(1234567890L);
         accountsDto.setAccountType("Savings");
@@ -38,10 +34,8 @@ public class AccountsMapperTest {
 
         Accounts accounts = new Accounts();
 
-        // Act
         Accounts mappedEntity = AccountsMapper.mapToAccounts(accountsDto, accounts);
 
-        // Assert
         assertNotNull(mappedEntity);
         assertEquals(accountsDto.getAccountNumber(), mappedEntity.getAccountNumber());
         assertEquals(accountsDto.getAccountType(), mappedEntity.getAccountType());

@@ -36,13 +36,8 @@ class GlobalExceptionHandlerTest {
         // Mock HttpServletRequest
         MockHttpServletRequest request = new MockHttpServletRequest();
 
-        // Create a ServletRequestAttributes object
-        ServletRequestAttributes servletRequestAttributes = new ServletRequestAttributes(request);
-
         // Create a ServletWebRequest object using ServletRequestAttributes
         ServletWebRequest servletWebRequest = new ServletWebRequest(request);
-
-        // Convert ServletWebRequest to WebRequest
 
         // Create an Exception object
         Exception exception = new Exception("Internal Server Error");
@@ -62,9 +57,6 @@ class GlobalExceptionHandlerTest {
 
         // Mock HttpServletRequest
         MockHttpServletRequest request = new MockHttpServletRequest();
-
-        // Create a ServletRequestAttributes object
-        ServletRequestAttributes servletRequestAttributes = new ServletRequestAttributes(request);
 
         // Convert ServletWebRequest to WebRequest
         WebRequest webRequest = new ServletWebRequest(request);
