@@ -1,10 +1,4 @@
 
-k
-;src/main/java/com/accounts/constants/AccountsConstants.java,5\8\586774cecbdd76c9a2d78cf49f2483a1181ce58e
-_
-/src/main/java/com/accounts/dto/AccountsDto.java,6\e\6e89c356a2cdf51bddcc2fbad89ab69ae8782cb6
-_
-/src/main/java/com/accounts/dto/CustomerDto.java,8\9\893c2321cf534cb8d8a9cc10f61e5942b7b3a728
 d
 4src/main/java/com/accounts/dto/ErrorResponseDto.java,b\e\be9b9a0a2694c552ae8f4f02bef5ced0cd735cb6
 _
@@ -17,18 +11,10 @@ e
 5src/main/java/com/accounts/mapper/AccountsMapper.java,1\3\138a2ddff2cc19be332f01d550a972e2a09eb7b2
 e
 5src/main/java/com/accounts/mapper/CustomerMapper.java,b\5\b55a435b2faecfcf26d77df008bea3d1e25207db
-m
-=src/main/java/com/accounts/repository/AccountsRepository.java,3\3\33d5ebd80c9ff73d02fbd5d18a9d6f3a5245b73f
-m
-=src/main/java/com/accounts/repository/CustomerRepository.java,5\a\5a514d50d2166827bea54a57e2fc3d4485315d90
 h
 8src/main/java/com/accounts/service/IAccountsService.java,5\3\534865b7593e450a410f1eeee0ab355bd51c1052
-p
-@src/main/java/com/accounts/service/impl/AccountsServiceImpl.java,4\5\45ac39e3c1b6c8d95159ce48a2b28119d8d18840
 _
 /src/main/java/com/accounts/entity/Customer.java,7\0\703733518e6ed4d98e46c7e9c3d600ae2f9e3a5f
-m
-=src/main/java/com/accounts/controller/AccountsController.java,e\8\e83d403dda38ed77a0ab2591dfddc40220a0616c
 U
 %.mvn/wrapper/maven-wrapper.properties,3\2\32e074f71d16c1e88ac02aa83592ca6ad1fd98a8
 7
