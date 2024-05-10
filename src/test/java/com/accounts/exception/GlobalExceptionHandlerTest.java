@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.mock.web.MockHttpServletRequest;
-import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.context.request.ServletWebRequest;
 import org.springframework.web.context.request.WebRequest;
 import java.time.LocalDateTime;
@@ -33,19 +32,14 @@ class GlobalExceptionHandlerTest {
     void testHandleGlobalException() {
         GlobalExceptionHandler globalExceptionHandler = new GlobalExceptionHandler();
 
-        // Mock HttpServletRequest
         MockHttpServletRequest request = new MockHttpServletRequest();
 
-        // Create a ServletWebRequest object using ServletRequestAttributes
         ServletWebRequest servletWebRequest = new ServletWebRequest(request);
 
-        // Create an Exception object
         Exception exception = new Exception("Internal Server Error");
 
-        // Call the method being tested
         ResponseEntity<ErrorResponseDto> responseEntity = globalExceptionHandler.handleGlobalException(exception, servletWebRequest);
 
-        // Assertions
         assertEquals(HttpStatus.INTERNAL_SERVER_ERROR, responseEntity.getStatusCode());
         assertNotNull(responseEntity.getBody());
         assertEquals("Internal Server Error", responseEntity.getBody().getErrorMessage());
@@ -55,19 +49,14 @@ class GlobalExceptionHandlerTest {
     void testHandleResourceNotFoundException() {
         GlobalExceptionHandler globalExceptionHandler = new GlobalExceptionHandler();
 
-        // Mock HttpServletRequest
         MockHttpServletRequest request = new MockHttpServletRequest();
 
-        // Convert ServletWebRequest to WebRequest
         WebRequest webRequest = new ServletWebRequest(request);
 
-        // Create a ResourceNotFoundException object
         ResourceNotFoundException exception = new ResourceNotFoundException("Customer", "id", "123");
 
-        // Call the method being tested
         ResponseEntity<ErrorResponseDto> responseEntity = globalExceptionHandler.handleResourceNotFoundException(exception, webRequest);
 
-        // Assertions
         assertEquals(HttpStatus.NOT_FOUND, responseEntity.getStatusCode());
         assertNotNull(responseEntity.getBody());
         assertEquals("Customer not found with the given input data id : '123'", responseEntity.getBody().getErrorMessage());
